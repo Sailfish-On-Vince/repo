@@ -33,11 +33,12 @@
 <hr>
 <h2>How to use it</h2>
 <h4><p style="color:red">backup your files first!!!</p></h4>
-Install <b><a href="community-adaptation/community-adaptation-localbuild-ota-0.0.1-1.armv7hl.rpm">community-adaptation-localbuild-ota-0.0.1-1.armv7hl.rpm</a></b> and use 
+Use blow commands to upgrade
 <pre>
     devel-su
     #Enter your password from Settings-Developer Model
-    pkcon refresh
+    zypper ar  https://sailfish-on-vince.github.io/repo/4.0.1.48/armv7hl/ vincerepo
+    pkcon refresh vincerepo #enter y
     ssu re 4.0.1.48
     version --dup
     #After all downloaded, reboot
